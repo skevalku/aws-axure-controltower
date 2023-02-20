@@ -1,13 +1,13 @@
 /* update this here once CT upgrades the account factory provisioning artefact id */
 variable "aws_ct_acount_provisioning_artifact_id" {
   type    = string
-  default = "pa-qsxoqlxc7jsme"
+  default = "pa-4tozzdhl2byuk"
 }
 
 
 variable "aws_ct_account_factory_product_id" {
   type    = string
-  default = "prod-htgwxpnsi4heg"
+  default = "prod-5az27pfgr7a4i"
 }
 
 variable "aws_sso_azuread_app" {
@@ -115,6 +115,12 @@ resource "aws_s3_bucket_public_access_block" "tf_state_bpa" {
   restrict_public_buckets = true
 }
 
+resource "aws_s3_bucket_versioning" "enabled" {
+  bucket = aws_s3_bucket.terraform_state_s3.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
 resource "aws_dynamodb_table" "terraform_locks" {
   name         = "tf-locks"
   billing_mode = "PAY_PER_REQUEST"
