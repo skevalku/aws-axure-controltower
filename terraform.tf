@@ -1,4 +1,4 @@
-terraform {
+/*terraform {
   backend "s3" {
     bucket = "terraform-petarskevalkutest-state"
     region = "eu-central-1"
@@ -6,3 +6,4 @@ terraform {
     dynamodb_table = "tf-locks"
  }
 }
+*/

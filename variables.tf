@@ -92,7 +92,7 @@ variable "ou_mapping_table" {
 
 
 resource "aws_s3_bucket" "terraform_state_s3" {
-  bucket        = "terraform-petarskevalkutest-state"
+  bucket        = "terraform-skevalku-state-123"
   force_destroy = true
   versioning {
     enabled = true
