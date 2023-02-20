@@ -1,9 +1,6 @@
 # What is this repository?
 This repoistory (for now) holds the AWS account request automation components.
 
-## Who owns this repository?
-The BioNTech CCoE team led by Nils Kreft
-
 ## Requirements
  - Terraform 1.3
     - AWS Provider 4.32 (stable)
