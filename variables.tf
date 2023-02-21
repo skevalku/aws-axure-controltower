@@ -18,13 +18,13 @@ variable "aws_sso_azuread_app" {
 variable "aws_sso_azuread_app_roleid" {
   type        = string
   description = "This is the built in role id for ``user'' role."
-  default     = "8774f594-1d59-4279-b9d9-59ef09a23530"
+  default     = "8774f594-1d59-4279-xxxx-59ef09a23530"
 
 }
 variable "aws_sso_azuread_resource_object_id" {
   type        = string
   description = "This is the object ID of the enterprise app."
-  default     = "4611faa5-b5fe-4a79-aec2-f71343c6b9bc"
+  default     = "4611faa5-b5fe-4a79-aexx-f71343c6b9bc"
 }
 
 variable "permission_sets" {

@@ -78,24 +78,3 @@ resource "aws_dynamodb_table" "terraform_locks" {
   }
 }
 
-
-/*resource "aws_ce_cost_category" "test2" {
-name = "Newtes"
-rule_version = "CostCategoryExpression.v1"
-dynamic "rule"{
-      for_each = {for account in local.accounts_resources : account.name => account}
-      content {
-        value = rule.value.costcenter
-        #Cannot be blank
-        type = "REGULAR"
-        rule {
-            dimension {
-              key           = "LINKED_ACCOUNT_NAME"
-              values        = [rule.value.name]
-              match_options = ["CONTAINS"]
-            }
-        }
-      }
-    }
-    */
-}
