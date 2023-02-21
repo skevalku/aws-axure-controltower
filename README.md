@@ -33,9 +33,3 @@ and run eventually with - run
 ```terraform apply```
 Due to the use of templates that are in turn TF code you need to run ```terraform apply``` twice for terraform to pick up the rendered terraform code. 
 
-
-## What is the layout of the repository?
-This repoistory aims at following good practices for Terraform repository layouts and the following conventions are in use:
-
-```scripts/```
- - Contains non-native resources called by either remote or local execution providers
