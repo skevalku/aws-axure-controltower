@@ -1,8 +1,9 @@
 resource "aws_servicecatalog_provisioned_product" "accounts" {
   for_each                 = { for account in local.accounts_resources : account.name => account }
   name                     = each.value.name
-  product_id               = var.aws_ct_account_factory_product_id
+  product_id               = "prod-5az27pfgr7a4i"
   provisioning_artifact_id = "pa-4tozzdhl2byuk"
+  path_id = "lpv2-6kx26wpwa6r7y"
 
   provisioning_parameters {
     key   = "SSOUserEmail"
