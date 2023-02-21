@@ -65,7 +65,7 @@ variable "account_sso_name" {
 variable "managed_resource_prefix" {
   type        = string
   description = "String value for resouces in AWS created with this automation."
-  default     = "terraform-ccoe-platform"
+  default     = "terraform-kingfisher-platform-skevalku"
 }
 
 
@@ -90,6 +90,10 @@ variable "ou_mapping_table" {
   }
 }
 
+resource "aws_s3_bucket" "terraform_state_s3" {
+  bucket        = "${var.managed_resource_prefix}-state"
+  force_destroy = false
+}
 
 resource "aws_s3_bucket_versioning" "s3_versioning_tf_state" {
   bucket = aws_s3_bucket.terraform_state_s3.id
@@ -118,4 +122,3 @@ resource "aws_dynamodb_table" "terraform_locks" {
     type = "S"
   }
 }
-
