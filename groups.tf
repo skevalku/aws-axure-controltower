@@ -5,7 +5,7 @@ locals {
   accounts_resources = [for a in local.account_requests :
     { name   = a.name,
       OU     = a.ou,
-      costcenter = a.costcenter,
+      #costcenter = a.costcenter,
       groups = [for p in var.permission_sets : format("%s_%s_%s", var.azure_ad_group_prefix, a.name, p)],
     email = format("${var.account_email_prefix}${a.name}@${var.account_email_maildomain}") }
   ]
