@@ -65,7 +65,7 @@ variable "account_sso_name" {
 variable "managed_resource_prefix" {
   type        = string
   description = "String value for resouces in AWS created with this automation."
-  default     = "terraform-kingfisher-platform-skevalku"
+  default     = "terraform-kf-platform-skevalku"
 }
 
 

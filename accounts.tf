@@ -1,4 +1,4 @@
-resource "aws_servicecatalog_provisioned_product" "accounts" {
+/*resource "aws_servicecatalog_provisioned_product" "accounts" {
   for_each                 = { for account in local.accounts_resources : account.name => account }
   name                     = each.value.name
   product_id               = "prod-5az27pfgr7a4i"
@@ -64,4 +64,4 @@ dynamic "rule"{
       }
     }
 }
-
+*/
