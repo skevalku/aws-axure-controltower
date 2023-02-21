@@ -36,7 +36,7 @@ variable "permission_sets" {
 variable "account_email_prefix" {
   type        = string
   description = "The string to place in front of the email address for aws accounts (including + addressing"
-  default     = "pfo+"
+  default     = "skevalku+"
 }
 
 variable "account_email_maildomain" {
@@ -48,12 +48,12 @@ variable "account_email_maildomain" {
 variable "azure_ad_group_prefix" {
   type        = string
   description = "The string to place before the account name (excluding including separator ``_'')"
-  default     = "AWS_RBAC_biontechglobal"
+  default     = "AWS_RBAC_kfl"
 }
 
 variable "account_sso_email" {
   type    = string
-  default = "petar.forai@gmail.com"
+  default = "skevalku@amazon.com"
 }
 
 variable "account_sso_name" {
@@ -65,7 +65,7 @@ variable "account_sso_name" {
 variable "managed_resource_prefix" {
   type        = string
   description = "String value for resouces in AWS created with this automation."
-  default     = "terraform-kf-platform-skevalku"
+  default     = "terraform-kf-cpt-skevalku"
 }
 
 
@@ -75,18 +75,7 @@ variable "ou_mapping_table" {
     "Automations"        = "Automations",
     "Sandbox"            = "Sandbox",
     "Graveyard"          = "Graveyard",
-    "Exceptions"         = "Exceptions",
-    "Non-Qualified-Prod" = "Non-Qualified-Prod (ou-zzl0-fxx3fso3)",
-    "Non-Qualified-Dev"  = "Non-Qualified-Dev (ou-zzl0-aklizy9i)",
-    "Non-Qualified-Int"  = "Non-Qualified-Int (ou-zzl0-8f2zkw7w)",
-    "Non-Qualified-Val"  = "Non-Qualified-Val (ou-zzl0-1hs0fvzh)",
-    "Non-Qualified-Trg"  = "Non-Qualified-Trg (ou-zzl0-1leuitgu)",
-    "Qualified-Dev"      = "Qualified-Dev (ou-2jnw-oifew93l)",
-    "Qualified-Val"      = "Qualified-Val (ou-zzl0-0gjcw7kr)",
-    "Qualified-Trg"      = "Qualified-Trg (ou-zzl0-52tceh1m)",
-    "Qualified-Int"      = "Qualified-Int (ou-zzl0-cvz993zz)",
-    "Qualified-Prod"     = "Qualified-Prod (ou-zzl0-pvpvxasg)",
-    "CrazyStuff"         = "CrazyStuff (ou-2jnw-88q6y65k)"
+    "Exceptions"         = "Exceptions"
   }
 }
 

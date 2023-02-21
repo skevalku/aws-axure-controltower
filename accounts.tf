@@ -1,4 +1,4 @@
-/*resource "aws_servicecatalog_provisioned_product" "accounts" {
+resource "aws_servicecatalog_provisioned_product" "accounts" {
   for_each                 = { for account in local.accounts_resources : account.name => account }
   name                     = each.value.name
   product_id               = "prod-5az27pfgr7a4i"
@@ -45,7 +45,7 @@
   ignore_errors = "true"
 }
 
-resource "aws_ce_cost_category" "test2" {
+/*resource "aws_ce_cost_category" "test2" {
 name = "Newtes"
 rule_version = "CostCategoryExpression.v1"
 dynamic "rule"{
@@ -63,5 +63,5 @@ dynamic "rule"{
         }
       }
     }
+    */
 }
-*/
